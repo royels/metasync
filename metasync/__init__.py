@@ -14,6 +14,7 @@ import glob
 from metasyncAPI import MetaSync
 
 def cmd_reconfigure(metasync, args, opts):
+    "Add more providers, or change account authorizations"
     metasync.cmd_reconfigure(args[0], args[1])
 
 def cmd_share(metasync, args, opts):
