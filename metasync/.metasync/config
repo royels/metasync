@@ -1,0 +1,9 @@
+[core]
+namespace = baloney
+clientid = affd678f-b4e7-11e4-b222-10ddb1b1298d
+encryptkey = 
+
+[backend]
+services = dropbox, google
+nreplicas = 1
+

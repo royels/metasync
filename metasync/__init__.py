@@ -15,8 +15,10 @@ from metasyncAPI import MetaSync
 
 def cmd_reconfigure(metasync, args, opts):
     "Add more providers, or change account authorizations"
-    metasync.cmd_reconfigure(args[0], args[1])
-
+    try:
+        metasync.cmd_reconfigure(args[0], args[1])
+    except IndexError:
+        "missing parameters, need 2 arguments"  
 def cmd_share(metasync, args, opts):
     "share the repo with someone"
 
