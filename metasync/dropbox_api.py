@@ -60,10 +60,10 @@ class DropboxAPI(StorageAPI, AppendOnlyLog):
       wait = WebDriverWait(browser, 30)
       email = wait.until(EC.element_to_be_clickable((By.XPATH, "//input[@name='login_email']")))
     except:
-      print(browser.title)
-      print(browser.page_source)
+      # print(browser.title)
+      # print(browser.page_source)
       browser.quit()
-      raise Exception("timeout for authorization")
+      print "Unable to authorize user. Re-enter your credentials."
     email.send_keys(raw_input("Enter your Dropbox email:"))
     pwd = browser.find_element_by_xpath("//input[@name='login_password']") 
     pwd.send_keys(getpass.getpass("Enter your Dropbox password:"))
