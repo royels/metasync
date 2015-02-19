@@ -14,7 +14,7 @@ import glob
 from metasyncAPI import MetaSync
 
 def cmd_reconfigure(metasync, args, opts):
-    "Add more providers, or change account authorizations"
+    "add more providers, or change account authorizations"
     try:
         metasync.cmd_reconfigure(args[0], args[1])
     except IndexError:
